@@ -10,7 +10,7 @@ def main():
     contact = -1
     for line in vcf:
         if line.startswith('BEGIN:VCARD'):
-            contact = contact + 1
+            contact += 1
             #print('Contact', contact)
             record.append([])
         if line.startswith('FN:'):
