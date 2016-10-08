@@ -23,7 +23,7 @@ def main():
     vcf.close()
     
     for i in record:
-        print('\nRecord', i)
+        print('Record', i,)
     print('\n', contact, 'Contacts.')
 
 
