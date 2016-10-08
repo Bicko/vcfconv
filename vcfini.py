@@ -14,14 +14,11 @@ def main():
             #print('Contact', contact)
             record.append([])
         if line.startswith('FN:'):
-            #record[contact].append(line[3:-1])
             record[contact].append(line[3:].strip())
         if line.startswith('EMAIL'):
-            #record[contact].append(line[11:-1])
             record[contact].append(line.strip())
         if line.startswith('TEL;'):
             record[contact].append(line.strip())
-            
             
     vcf.close()
     
