@@ -4,14 +4,16 @@
 # Read the contents of a VCF file
 # ...write some to a tobii-contacts file.
 
+#import sys
+
 def main():
-    vcf = open('00001.vcf', 'r')
+    vcf = open('00001.vcf', 'rU')
     record = []
     contact = -1
     for line in vcf:
+        print(line)
         if line.startswith('BEGIN:VCARD'):
             contact += 1
-            #print('Contact', contact)
             record.append([])
         if line.startswith('FN:'):
             record[contact].append(line[3:].strip())
@@ -24,7 +26,8 @@ def main():
     
     for i in record:
         print('Record', i,)
-    print('\n', contact, 'Contacts.')
+        input() #wait for enter
+    print('\n', contact + 1, 'Contacts.')
 
 
 if __name__ == '__main__':
