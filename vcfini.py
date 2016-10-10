@@ -9,6 +9,8 @@
 def main():
     vcf = open('00001.vcf', 'rU')
     record = []
+
+    #loop over the file, put individual vcards into a list
     contact = -1
     for line in vcf:
         print(line)
